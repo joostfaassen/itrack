@@ -45,20 +45,25 @@ class LabelCommand extends BaseCommand
         $res = $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $row) {
+            $stamp = $row['stamp'];
+            $latitude = $row['latitude'];
+            $longitude = $row['longitude'];
+            
+            echo "#$id: " . date('d/M/Y H:i', $stamp) . ": $latitude, $longitude\n";
             $id = $row['id'];
-            $loc = GeoLocation::fromDegrees($row['latitude'], $row['longitude']);
+            $loc = GeoLocation::fromDegrees($latitude, $longitude);
             $label = null;
             foreach ($config['locations'] as $key => $details) {
                 $loc2 = GeoLocation::fromDegrees($details['latitude'], $details['longitude']);
-                $distance = $loc->distanceTo($loc2, 'kilometers');
-                echo "Distance: " . $key . '/' .
+                $distance = round($loc->distanceTo($loc2, 'kilometers'), 3);
+                echo "  Distance: " . $key . '/' .
                     $distance . " kilometers \n";
                 if ($distance < $details['radius']) {
                     $label = $key;
                 }
             }
             
-            echo "TAGGING $id AS $label\n";
+            echo "  TAGGING $id AS `$label`\n";
             $writer->update(['id'=>$id], ['label'=>$label]);
         }
         exit("Done!\n");

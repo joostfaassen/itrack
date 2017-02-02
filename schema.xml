@@ -8,6 +8,7 @@
     <column name="stamp" type="integer" notnull="false" />
     <column name="latitude" type="string" length="128" />
     <column name="longitude" type="string" length="128" />
+    <column name="label" type="string" length="128" notnull="false" />
     
     <index name="primary" primary="true" columns="id" />
   </table>

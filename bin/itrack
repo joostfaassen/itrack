@@ -24,4 +24,5 @@ $application->setCatchExceptions(true);
 $application->add(new \iTrack\Command\SchemaCommand());
 $application->add(new \iTrack\Command\RunCommand());
 $application->add(new \iTrack\Command\LsCommand());
+$application->add(new \iTrack\Command\LabelCommand());
 $application->run();

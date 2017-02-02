@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "741bcf05f23124bbdcfdb0b6b6613c44",
-    "content-hash": "646de8cde89ac4c863915fc5e01bdf75",
+    "hash": "1252b9e6c658e497384a7ebc14b24657",
+    "content-hash": "73e176dafffa693f458f799ef5f74ba7",
     "packages": [
         {
             "name": "albeebe/findmyiphone",
@@ -96,6 +96,51 @@
                 "process"
             ],
             "time": "2015-09-01 07:42:02"
+        },
+        {
+            "name": "anthonymartin/geo-location",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anthonymartin/GeoLocation.php.git",
+                "reference": "50bf026f069296dfae11aa195d987854b2e75855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anthonymartin/GeoLocation.php/zipball/50bf026f069296dfae11aa195d987854b2e75855",
+                "reference": "50bf026f069296dfae11aa195d987854b2e75855",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "class",
+            "autoload": {
+                "psr-0": {
+                    "AnthonyMartin": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC 3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Martin",
+                    "email": "anthony@replaycreative.com",
+                    "homepage": "http://replaycreative.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Retrieve bounding coordinates, distances, longitude and latitude with GeoLocation.class.php",
+            "homepage": "https://github.com/anthonymartin/GeoLocation.php",
+            "keywords": [
+                "bounding coordinates",
+                "distances",
+                "geocoding",
+                "geolocation"
+            ],
+            "time": "2016-09-17 18:05:14"
         },
         {
             "name": "dbtk/schema-loader",

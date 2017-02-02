@@ -19,6 +19,7 @@
         "symfony/yaml": "~2.7",
         "minerva/writer": "dev-master",
         "andrewfenn/pid-helper": "0.1.0",
+        "anthonymartin/geo-location": "~1.0",
         "dbtk/schema-loader": "~2.1"
     },
     "autoload": {

@@ -1,0 +1,29 @@
+{
+    "name": "joostfaassen/itrack",
+    "description": "Poll and log apple device locations through the FindMyiPhone service",
+    "homepage": "http://www.github.com/joostfaassen/itrack",
+    "keywords": ["php", "iphone", "ios", "icloud", "findmyiphone"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joost Faassen",
+            "email": "j.faassen@linkorb.com",
+            "role": "Development"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "albeebe/findmyiphone": "dev-master",
+        "symfony/console": "~2.7",
+        "symfony/process": "~2.7",
+        "symfony/yaml": "~2.7",
+        "minerva/writer": "dev-master",
+        "dbtk/schema-loader": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "iTrack\\": "src/"
+        }
+    },
+    "license": "MIT"
+}

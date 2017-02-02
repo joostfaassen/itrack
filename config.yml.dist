@@ -1,0 +1,9 @@
+---
+username: "my_username"
+password: "my_password"
+interval: 60
+pdo: mysql://username:password@localhost/itrack
+
+devices:
+    - xxxxxxx
+    - yyyyyyy

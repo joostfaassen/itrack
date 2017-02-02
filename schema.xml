@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+  <table name="location">
+    <column name="id" type="integer" unsigned="true" autoincrement="true"/>
+    <column name="device_id" type="string" length="128" />
+    <column name="device_name" type="string" length="128" />
+    <column name="device_display_name" type="string" length="128" />
+    <column name="stamp" type="integer" notnull="false" />
+    <column name="latitude" type="string" length="128" />
+    <column name="longitude" type="string" length="128" />
+    
+    <index name="primary" primary="true" columns="id" />
+  </table>
+  
+</schema>

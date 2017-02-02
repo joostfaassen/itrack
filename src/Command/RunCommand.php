@@ -59,7 +59,9 @@ class RunCommand extends BaseCommand
                     );
                     // Locate the device
                     $location = $client->locate($device->ID);
-                    $output->writeLn(" * Location: " . $location->latitude . ", " . $location->longitude . ")");
+                    $label = $this->resolveLabel($config, $location->latitude, $location->longitude);
+                    $output->writeLn(" * Location: " . $location->latitude . ", " . $location->longitude . ") = $label");
+                    
                     
                     $row = [];
                     $row['device_id'] = $device->ID;
@@ -68,6 +70,7 @@ class RunCommand extends BaseCommand
                     $row['stamp'] = time();
                     $row['latitude'] = $location->latitude;
                     $row['longitude'] = $location->longitude;
+                    $row['label'] = $label;
 
                     $writer->insert(
                         $row

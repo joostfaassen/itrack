@@ -5,6 +5,7 @@ namespace iTrack\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Yaml\Yaml;
+use AnthonyMartin\GeoLocation\GeoLocation as GeoLocation;
 use RuntimeException;
 use PDO;
 
@@ -22,6 +23,23 @@ abstract class BaseCommand extends Command
         $configYml = file_get_contents($configFilename);
         $config = Yaml::parse($configYml);
         return $config;
+    }
+    
+    public function resolveLabel($config, $latitude, $longitude)
+    {
+        $loc = GeoLocation::fromDegrees($latitude, $longitude);
+        foreach ($config['locations'] as $key => $details) {
+            $loc2 = GeoLocation::fromDegrees($details['latitude'], $details['longitude']);
+            $distance = round($loc->distanceTo($loc2, 'kilometers'), 3);
+            /*
+            echo "  Distance: " . $key . '/' .
+                $distance . " kilometers \n";
+            */
+            if ($distance < $details['radius']) {
+                return $key;
+            }
+        }
+        return null;
     }
     
     public function getPdo($url)

@@ -6,7 +6,6 @@ autotune.json
 
 # Composer
 /composer.phar
-composer.lock
 
 config.yml
 

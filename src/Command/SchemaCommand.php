@@ -40,7 +40,7 @@ class SchemaCommand extends BaseCommand
         $config = $this->loadConfig($input);
 
         $pdo = $config['pdo'];
-        $schema = $config['schema'];
+        $schema = 'schema.xml';
 
         $cmd = 'vendor/bin/dbtk-schema-loader schema:load ' . $schema . ' ' . $pdo;
         $cmd .= ' --apply';

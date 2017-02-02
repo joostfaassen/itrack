@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joostfaassen/PHP-FindMyiPhone.git",
-                "reference": "0bf44b43823cc5a111a757e3e7b02f0af8ae0d6d"
+                "reference": "e5c4640fb906fc0c3709c0bceb1aa9023ff4fb4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joostfaassen/PHP-FindMyiPhone/zipball/0bf44b43823cc5a111a757e3e7b02f0af8ae0d6d",
-                "reference": "0bf44b43823cc5a111a757e3e7b02f0af8ae0d6d",
+                "url": "https://api.github.com/repos/joostfaassen/PHP-FindMyiPhone/zipball/e5c4640fb906fc0c3709c0bceb1aa9023ff4fb4d",
+                "reference": "e5c4640fb906fc0c3709c0bceb1aa9023ff4fb4d",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "iphone",
                 "php"
             ],
-            "time": "2017-02-02 20:49:01"
+            "time": "2017-02-02 20:53:38"
         },
         {
             "name": "dbtk/schema-loader",

@@ -6,6 +6,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use PidHelper\PidHelper;
 use FindMyiPhone\Client;
 use Minerva\Writer\PdoWriter;
 use RuntimeException;
@@ -35,6 +36,11 @@ class RunCommand extends BaseCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $pidHelper = new PidHelper('/tmp/', 'itrack.pid');
+        if (!$pidHelper->lock()) {
+            exit("Already running\n");
+        }
+
         $config = $this->loadConfig($input);
         $pdo = $this->getPdo($config['pdo']);
         $writer = new PdoWriter($pdo, 'location');
@@ -71,6 +77,7 @@ class RunCommand extends BaseCommand
             $output->writeLn("Sleeping for " . $config['interval'] . ' seconds');
             sleep($config['interval']);
         }
+        $pidHelper->unlock();
         exit("Done!\n");
     }
 }

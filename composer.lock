@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8c8b7287ead6276acf038fd52c6b906",
-    "content-hash": "0f789eea1d74efbaaaa413a606d0d259",
+    "hash": "741bcf05f23124bbdcfdb0b6b6613c44",
+    "content-hash": "646de8cde89ac4c863915fc5e01bdf75",
     "packages": [
         {
             "name": "albeebe/findmyiphone",
@@ -56,6 +56,46 @@
                 "php"
             ],
             "time": "2017-02-02 20:53:38"
+        },
+        {
+            "name": "andrewfenn/pid-helper",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andrewfenn/pidhelper.git",
+                "reference": "407e3b4e0210929a95adf2262c6c3cd38c2dd5e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andrewfenn/pidhelper/zipball/407e3b4e0210929a95adf2262c6c3cd38c2dd5e4",
+                "reference": "407e3b4e0210929a95adf2262c6c3cd38c2dd5e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PidHelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Fenn",
+                    "homepage": "https://github.com/andrewfenn"
+                }
+            ],
+            "description": "A small helper class used to help you check if code is still running",
+            "keywords": [
+                "pid",
+                "process"
+            ],
+            "time": "2015-09-01 07:42:02"
         },
         {
             "name": "dbtk/schema-loader",
